@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Neural Network{% endblock %}
+{% block content %}
+    <h1>Neural Network js implementation</h1>
+{% endblock %}
+{% block scripts %}
+    <script defer src="{{ url_for('static', filename='js/NeuralNetwork/activation_function.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/NeuralNetwork/network.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/NeuralNetwork/node.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/NeuralNetwork/layer.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/NeuralNetwork/neural_network.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/NeuralNetwork/nn_script.js') }}"></script>
+{% endblock %}

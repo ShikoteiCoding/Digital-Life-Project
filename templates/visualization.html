@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Visualization{% endblock %}
+{% block content %}
+    <h1>Visualization of Digital life</h1>
+    <main></main>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script defer src="{{ url_for('static', filename='js/sketch.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/mover.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/entity.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/board.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/egg.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/food.js') }}"></script>
+{% endblock %}
