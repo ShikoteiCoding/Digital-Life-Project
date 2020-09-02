@@ -10,7 +10,6 @@ class Mover {
     this.radar_color = [255, 0, 0]; // red by default
     this.is_moving = true;
     this.board = board;
-    // console.log(this.board);
 
     // Static characteristics (not changing with genes)
     this.energy_base_consuption_per_second = dna.radius;   // Base consuption per second is the radius of the dot
@@ -136,7 +135,7 @@ class Mover {
   show() {
     stroke(220, 100);
     strokeWeight(1);
-    fill(200);
+    fill(this.dna.R, this.dna.G, this.dna.B);
     ellipse(this.pos.x, this.pos.y, 2*this.dna.radius, 2*this.dna.radius);
     if (this.visual) {
       stroke(255);

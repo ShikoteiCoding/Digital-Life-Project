@@ -10,10 +10,10 @@ let DEFAULT_DNA = {
   radius: 10,
   vision_depth: 50,
   vision_angle: 30,
-  hatch_time: 20,
-  color_red: 100,
-  color_green: 100,
-  color_blue: 100,
+  hatch_time: 2,
+  R: 100,
+  G: 100,
+  B: 100,
   mutation_size: 1,
   mutation_chance: 1
 }

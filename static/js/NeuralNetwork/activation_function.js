@@ -9,10 +9,10 @@ let activation = {
 	SIGMOID: function (x) {
 		return (1 / (1 + Math.exp(-x)));
 	},
-	LEAKY_RELU: function (x) {
-		if (x > 0) return x;
-		else return (x * 0.01);
-	},
+//	LEAKY_RELU: function (x) {
+//		if (x > 0) return x;
+//		else return (x * 0.01);
+//	},
 	SOFTMAX: function (array) {
 		let sum = 0;
 		let result = [];

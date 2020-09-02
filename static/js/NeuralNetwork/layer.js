@@ -19,10 +19,10 @@ class Layer {
 
     connect(count) {
         for (let i = 0; i < this.nodes.length; i++) {
-            this.nodes[i].initWeight(count);
+            this.nodes[i].randomInitWeights(count);
         }
 
-        if (this.bias !== undefined) this.bias.initWeight(count);
+        if (this.bias !== undefined) this.bias.randomInitWeights(count);
     }
 
     feedForward(layer) {
@@ -38,6 +38,7 @@ class Layer {
 			}
 		}
 
+        // Adding the bias value
         for (let w = 0; w < this.bias.weights.length; i++) {
             layer.nodes[w].value += this.bias.weights[w];
         }
@@ -47,7 +48,6 @@ class Layer {
 		else layer.setValues(layer.activationfunc(layer.getValues())); // SOFTMAX is with array as input
 
     }
-
 
     getValues() {
         let result = [];

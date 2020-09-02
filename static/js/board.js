@@ -11,7 +11,7 @@ class Board {
     // Movers
     this.movers = [];
     this.nb_movers = nb_mov;
-    this.init_movers();
+//    this.init_movers();
 
     // Eggs
     this.eggs = [];
@@ -70,9 +70,9 @@ class Board {
   ********************************************************************
   */
   init_movers() {
-    // for (let i = 0; i < this.nb_movers; i++) {
-    //   this.movers[i] = new Mover(createVector(random(width), random(height)), DEFAULT_DNA, true);
-    // }
+     for (let i = 0; i < this.nb_movers; i++) {
+       this.movers[i] = new Mover(createVector(random(width), random(height)), DEFAULT_DNA, true);
+     }
   }
 
   show_movers() {

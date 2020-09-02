@@ -27,5 +27,10 @@ def neural_network():
     return render_template('neural_network.html', active="neural_network")
 
 
+@app.route('/direction')
+def direction():
+    return render_template('direction.html', active="direction")
+
+
 if __name__ == '__main__':
     app.run(debug=True, host="127.0.0.1", port=4040)
