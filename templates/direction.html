@@ -2,9 +2,40 @@
 {% block title %} Direction testing {% endblock %}
 {% block content %}
 
-    <h1>Here to test moving object with output</h1>
+    <h2>Here to test moving object with digit output</h2>
+    <p class="text-justify">
+        This page is made to find a technical solution to move an object with digit output.
+        A Neural Network is able to perform regression which represents for us 4 output values given 4 directions :
+        <ul>
+            <li>North</li>
+            <li>South</li>
+            <li>Est</li>
+            <li>West</li>
+        </ul>
+        A vector of "goal direction" is created with those 4 values and rotated according to the already "existing direction".
+    </p>
+
+    <div class="row">
+        <main></main>
+        <div class="card col-3 direction-button-control">
+            <form>
+                <div class="form-group">
+                    <label for="north-direction" class="col-form-label">North</label>
+                    <input type="number" class="form-control form-control-sm button-in-card" id="north-direction" placeHolder="North direction">
+                    <label for="south-direction" class="col-form-label">South</label>
+                    <input type="number" class="form-control form-control-sm button-in-card" id="south-direction" placeHolder="South direction">
+                    <label for="est-direction" class="col-form-label">Est</label>
+                    <input type="number" class="form-control form-control-sm button-in-card" id="est-direction" placeHolder="Est direction">
+                    <label for="west-direction" class="col-form-label">West</label>
+                    <input type="number" class="form-control form-control-sm button-in-card" id="west-direction" placeHolder="West direction">
+                </div>
+            </form>
+            <button type="button" class="btn btn-primary" onclick="moveObject()">Move</button>
+        </div>
+    </div>
 
 {% endblock %}
 {% block scripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
     <script defer src="{{ url_for('static', filename='js/Direction/sketch.js') }}"></script>
 {% endblock %}
